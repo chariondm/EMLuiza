@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace EMLuiza.Domain.Repositories.Base
+namespace EMLuiza.Domain.Interfaces.Repositories.Base
 {
     public interface IRepositoryBase<TEntity, TId>
        where TEntity : class
