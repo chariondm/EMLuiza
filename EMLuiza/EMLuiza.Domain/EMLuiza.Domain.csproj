@@ -45,6 +45,8 @@
   <ItemGroup>
     <Compile Include="Entities\Employee.cs" />
     <Compile Include="Entities\Base\EntityBase.cs" />
+    <Compile Include="Interfaces\Services\Base\IServiceBase.cs" />
+    <Compile Include="Interfaces\Services\IServiceEmployee.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Interfaces\Repositories\Base\IRepositoryBase.cs" />
     <Compile Include="Interfaces\Repositories\IRepositoryEmployee.cs" />
