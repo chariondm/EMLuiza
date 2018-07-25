@@ -143,6 +143,7 @@
     <Compile Include="Persistence\EMLuizaContext.cs" />
     <Compile Include="Persistence\Map\EmployeeMap.cs" />
     <Compile Include="Persistence\Repositories\Base\RepositoryBase.cs" />
+    <Compile Include="Persistence\Repositories\RepositoryEmployee.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Transactions\IUnitOfWork.cs" />
     <Compile Include="Transactions\UnitOfWork.cs" />
