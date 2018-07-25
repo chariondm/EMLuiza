@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Arguments\AddEmployeeRequest.cs" />
+    <Compile Include="Arguments\AddEmployeeResponse.cs" />
     <Compile Include="Entities\Employee.cs" />
     <Compile Include="Entities\Base\EntityBase.cs" />
     <Compile Include="Interfaces\Arguments\IRequest.cs" />
