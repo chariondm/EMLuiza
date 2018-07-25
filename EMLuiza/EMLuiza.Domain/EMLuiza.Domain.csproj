@@ -46,10 +46,9 @@
     <Compile Include="Entities\Employee.cs" />
     <Compile Include="Entities\Base\EntityBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ValueObjects\Base\ValueObject.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ValueObjects\Base\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
