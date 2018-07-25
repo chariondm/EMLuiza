@@ -3,7 +3,7 @@ using EMLuiza.Domain.ValueObjects;
 
 namespace EMLuiza.Domain.Entities
 {
-    class Employee : EntityBase
+    public class Employee : EntityBase
     {
         public Employee(Name name, Email email, string department)
         {
