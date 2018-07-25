@@ -135,11 +135,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Persistence\EMLuizaContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Transactions\IUnitOfWork.cs" />
+    <Compile Include="Transactions\UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EMLuiza.Domain\EMLuiza.Domain.csproj">
+      <Project>{0F590273-3BF5-4759-8834-D2ECCD66A0C3}</Project>
+      <Name>EMLuiza.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
