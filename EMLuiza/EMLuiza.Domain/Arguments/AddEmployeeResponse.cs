@@ -14,7 +14,7 @@ namespace EMLuiza.Domain.Arguments
             return new AddEmployeeResponse()
             {
                 Id = employee.Id,
-                Message = "Operação realizada com sucesso!"
+                Message = "Registro inserido com sucesso!"
             };
         }
     }
