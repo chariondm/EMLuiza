@@ -1,4 +1,5 @@
-﻿using EMLuiza.Domain.Entities;
+﻿using EMLuiza.Domain.Arguments;
+using EMLuiza.Domain.Entities;
 using EMLuiza.Domain.Interfaces.Services.Base;
 using System.Linq;
 
@@ -6,10 +7,10 @@ namespace EMLuiza.Domain.Interfaces.Services
 {
     public interface IServiceEmployee : IServiceBase
     {
-        void Create(Employee employee);
+        AddEmployeeResponse Create(AddEmployeeRequest req);
 
         IQueryable<Employee> List();
 
-        void Remove(Employee employee);
+        RemoveEmployeeResponse Remove(AddEmployeeRequest req);
     }
 }
