@@ -43,8 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Arguments\AddEmployeeRequest.cs" />
     <Compile Include="Entities\Employee.cs" />
     <Compile Include="Entities\Base\EntityBase.cs" />
+    <Compile Include="Interfaces\Arguments\IRequest.cs" />
+    <Compile Include="Interfaces\Arguments\IResponse.cs" />
     <Compile Include="Interfaces\Services\Base\IServiceBase.cs" />
     <Compile Include="Interfaces\Services\IServiceEmployee.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
