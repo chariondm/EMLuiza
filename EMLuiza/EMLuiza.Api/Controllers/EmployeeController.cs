@@ -3,6 +3,7 @@ using EMLuiza.Domain.Arguments;
 using EMLuiza.Domain.Interfaces.Services;
 using EMLuiza.Infra.Transactions;
 using System;
+using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
@@ -51,13 +52,13 @@ namespace EMLuiza.Api.Controllers
             }
         }
 
-        [Route("")]
+        [Route("{id}")]
         [HttpDelete]
-        public async Task<HttpResponseMessage> Remove(RemoveEmployeeRequest req)
+        public async Task<HttpResponseMessage> Remove(Guid id)
         {
             try
             {
-                var response = _serviceEmployee.Remove(req);
+                var response = _serviceEmployee.Remove(id);
 
                 return await ResponseAsync(response, _serviceEmployee);
             }

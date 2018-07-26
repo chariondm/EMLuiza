@@ -35,7 +35,7 @@ namespace EMLuiza.Domain.Services
 
             employee = _repositoryEmployee.Create(employee);
 
-            return (AddEmployeeResponse)employee;
+            return new AddEmployeeResponse("CREATED");
         }
 
         public IEnumerable<EmployeeResponse> List(int takeCount, int takePage)
@@ -49,13 +49,20 @@ namespace EMLuiza.Domain.Services
                         .ToList();
         }
 
-        public RemoveEmployeeResponse Remove(RemoveEmployeeRequest req)
+        public RemoveEmployeeResponse Remove(Guid id)
         {
-            var employee = _repositoryEmployee.GetById(req.Id);
+            var employee = _repositoryEmployee.GetById(id);
+
+            if (employee == null)
+            {
+                AddNotification("Id", "Not found");
+                return null;
+
+            }
 
             _repositoryEmployee.Remove(employee);
 
-            return new RemoveEmployeeResponse("No content");
+            return new RemoveEmployeeResponse("OK");
         }
     }
 }

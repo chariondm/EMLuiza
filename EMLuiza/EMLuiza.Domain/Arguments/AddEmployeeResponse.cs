@@ -6,16 +6,11 @@ namespace EMLuiza.Domain.Arguments
 {
     public class AddEmployeeResponse : IResponse
     {
-        public Guid Id { get; private set; }
-        public string Message { get; private set; }
-
-        public static explicit operator AddEmployeeResponse(Employee employee)
+        public AddEmployeeResponse(string message)
         {
-            return new AddEmployeeResponse()
-            {
-                Id = employee.Id,
-                Message = "Registro inserido com sucesso!"
-            };
+            Message = message;
         }
+
+        public string Message { get; private set; }
     }
 }

@@ -7,11 +7,7 @@ namespace EMLuiza.Domain.Arguments
     {
         public Guid Id { get; set; }
 
-        public string FullName { get; set; }
-
-        public string FirstName { get; set; }
-
-        public string LastName { get; set; }
+        public string Name { get; set; }
 
         public string Email { get; set; }
 
@@ -22,9 +18,7 @@ namespace EMLuiza.Domain.Arguments
             return new EmployeeResponse()
             {
                 Id = employee.Id,
-                FullName = employee.ToString(),
-                FirstName = employee.Name.FirstName,
-                LastName = employee.Name.LastName,
+                Name = employee.ToString(),
                 Email = employee.Email.Address,
                 Department = employee.Department
             };
