@@ -11,6 +11,6 @@ namespace EMLuiza.Domain.Interfaces.Services
 
         IQueryable<Employee> List();
 
-        RemoveEmployeeResponse Remove(AddEmployeeRequest req);
+        RemoveEmployeeResponse Remove(RemoveEmployeeRequest req);
     }
 }

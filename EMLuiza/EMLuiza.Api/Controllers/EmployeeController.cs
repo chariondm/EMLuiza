@@ -21,11 +21,11 @@ namespace EMLuiza.Api.Controllers
 
         [Route("")]
         [HttpPost]
-        public async Task<HttpResponseMessage> Create(AddEmployeeRequest request)
+        public async Task<HttpResponseMessage> Create(AddEmployeeRequest req)
         {
             try
             {
-                var response = _serviceEmployee.Create(request);
+                var response = _serviceEmployee.Create(req);
 
                 return await ResponseAsync(response, _serviceEmployee);
             }
@@ -42,6 +42,22 @@ namespace EMLuiza.Api.Controllers
             try
             {
                 var response = _serviceEmployee.List();
+
+                return await ResponseAsync(response, _serviceEmployee);
+            }
+            catch (Exception ex)
+            {
+                return await ResponseExceptionAsync(ex);
+            }
+        }
+
+        [Route("")]
+        [HttpDelete]
+        public async Task<HttpResponseMessage> Remove(RemoveEmployeeRequest req)
+        {
+            try
+            {
+                var response = _serviceEmployee.Remove(req);
 
                 return await ResponseAsync(response, _serviceEmployee);
             }

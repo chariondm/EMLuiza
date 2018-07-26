@@ -42,7 +42,7 @@ namespace EMLuiza.Domain.Services
             throw new NotImplementedException();
         }
 
-        public RemoveEmployeeResponse Remove(AddEmployeeRequest req)
+        public RemoveEmployeeResponse Remove(RemoveEmployeeRequest req)
         {
             throw new NotImplementedException();
         }
