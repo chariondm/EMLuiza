@@ -130,6 +130,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Arguments\EmployeeResponse.cs" />
     <Compile Include="Arguments\RemoveEmployeeResponse.cs" />
     <Compile Include="Arguments\RemoveEmployeeRequest.cs" />
     <Compile Include="Arguments\AddEmployeeRequest.cs" />

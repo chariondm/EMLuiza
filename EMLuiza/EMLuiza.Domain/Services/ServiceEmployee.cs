@@ -5,6 +5,7 @@ using EMLuiza.Domain.Interfaces.Services;
 using EMLuiza.Domain.ValueObjects;
 using prmToolkit.NotificationPattern;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace EMLuiza.Domain.Services
@@ -37,9 +38,13 @@ namespace EMLuiza.Domain.Services
             return (AddEmployeeResponse)employee;
         }
 
-        public IQueryable<Employee> List()
+        public IEnumerable<EmployeeResponse> List()
         {
-            throw new NotImplementedException();
+            return _repositoryEmployee
+                        .List()
+                        .ToList()
+                        .Select(employee => (EmployeeResponse)employee)
+                        .ToList();
         }
 
         public RemoveEmployeeResponse Remove(RemoveEmployeeRequest req)

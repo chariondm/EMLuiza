@@ -5,6 +5,11 @@ namespace EMLuiza.Domain.ValueObjects
 {
     public class Name : ValueObjectBase
     {
+        protected Name()
+        {
+
+        }
+
         public Name(string firstName, string lastName)
         {
             FirstName = firstName;

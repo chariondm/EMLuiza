@@ -5,6 +5,11 @@ namespace EMLuiza.Domain.ValueObjects
 {
     public class Email : ValueObjectBase
     {
+        protected Email()
+        {
+
+        }
+
         public Email(string address)
         {
             Address = address;

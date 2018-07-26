@@ -1,7 +1,6 @@
 ﻿using EMLuiza.Domain.Arguments;
-using EMLuiza.Domain.Entities;
 using EMLuiza.Domain.Interfaces.Services.Base;
-using System.Linq;
+using System.Collections.Generic;
 
 namespace EMLuiza.Domain.Interfaces.Services
 {
@@ -9,7 +8,7 @@ namespace EMLuiza.Domain.Interfaces.Services
     {
         AddEmployeeResponse Create(AddEmployeeRequest req);
 
-        IQueryable<Employee> List();
+        IEnumerable<EmployeeResponse> List();
 
         RemoveEmployeeResponse Remove(RemoveEmployeeRequest req);
     }

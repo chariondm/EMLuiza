@@ -5,6 +5,11 @@ namespace EMLuiza.Domain.Entities
 {
     public class Employee : EntityBase
     {
+        protected Employee()
+        {
+
+        }
+
         public Employee(Name name, Email email, string department)
         {
             Name = name;
@@ -19,5 +24,10 @@ namespace EMLuiza.Domain.Entities
         public Email Email { get; private set; }
 
         public string Department { get; private set; }
+
+        public override string ToString()
+        {
+            return this.Name.FirstName + " " + this.Name.LastName;
+        }
     }
 }
