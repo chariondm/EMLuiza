@@ -9,17 +9,29 @@ namespace EMLuiza.Domain.Arguments
 {
     public class AddEmployeeRequest : IRequest
     {
-        public AddEmployeeRequest(string firstName, string lastName, string email, string department)
+        private string _firstName, _lastName;
+
+        public AddEmployeeRequest(string name, string email, string department)
         {
-            FirstName = firstName;
-            LastName = lastName;
+            _firstName = name.Split(' ')[0];
+            _lastName = string.Join(" ", name.Split(' ').Skip(1));
+            Name = name;
             Email = email;
             Department = department;
         }
 
-        public string FirstName { get; private set; }
-        public string LastName { get; private set; }
+        public string Name { get; private set; }
         public string Email { get; private set; }
         public string Department { get; private set; }
+
+        public string FirstName()
+        {
+            return _firstName;
+        }
+
+        public string LastName()
+        {
+            return _lastName;
+        }
     }
 }

@@ -14,14 +14,7 @@ namespace EMLuiza.Infra.Persistence.Map
             Property(p => p.Email.Address)
                 .IsRequired()
                 .HasColumnName("email")
-                .HasMaxLength(200)
-                .HasColumnAnnotation("Index",
-                    new IndexAnnotation(
-                        new IndexAttribute("uk_employee_email")
-                        {
-                            IsUnique = true
-                        })
-                    );
+                .HasMaxLength(200);
 
             Property(p => p.Name.FirstName)
                 .IsRequired()

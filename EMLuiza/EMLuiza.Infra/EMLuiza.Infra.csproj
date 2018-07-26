@@ -139,6 +139,10 @@
     <Compile Include="Migrations\201807252203247_InitialCreate.Designer.cs">
       <DependentUpon>201807252203247_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807260318349_RemoveUK_Email.cs" />
+    <Compile Include="Migrations\201807260318349_RemoveUK_Email.Designer.cs">
+      <DependentUpon>201807260318349_RemoveUK_Email.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Persistence\EMLuizaContext.cs" />
     <Compile Include="Persistence\Map\EmployeeMap.cs" />
@@ -161,6 +165,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201807252203247_InitialCreate.resx">
       <DependentUpon>201807252203247_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807260318349_RemoveUK_Email.resx">
+      <DependentUpon>201807260318349_RemoveUK_Email.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

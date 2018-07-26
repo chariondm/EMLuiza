@@ -9,7 +9,7 @@ using System.Web.Http;
 
 namespace EMLuiza.Api.Controllers
 {
-    [RoutePrefix("api/employee")]
+    [RoutePrefix("employee")]
     public class EmployeeController : ControllerBase
     {
         private readonly IServiceEmployee _serviceEmployee;

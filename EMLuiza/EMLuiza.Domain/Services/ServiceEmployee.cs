@@ -21,7 +21,7 @@ namespace EMLuiza.Domain.Services
 
         public AddEmployeeResponse Create(AddEmployeeRequest req)
         {
-            var name = new Name(req.FirstName, req.LastName);
+            var name = new Name(req.FirstName(), req.LastName());
             var email = new Email(req.Email);
 
             var employee = new Employee(name, email, req.Department);
