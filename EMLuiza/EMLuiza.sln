@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMLuiza.Infra", "EMLuiza.In
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMLuiza.IoC", "EMLuiza.IoC\EMLuiza.IoC.csproj", "{530B352B-861E-4C27-80A3-F15637C7FC09}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMLuiza.Api", "EMLuiza.Api\EMLuiza.Api.csproj", "{B76BCAB2-5FA4-4E69-B9CF-0945E97CE599}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{530B352B-861E-4C27-80A3-F15637C7FC09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{530B352B-861E-4C27-80A3-F15637C7FC09}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{530B352B-861E-4C27-80A3-F15637C7FC09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B76BCAB2-5FA4-4E69-B9CF-0945E97CE599}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B76BCAB2-5FA4-4E69-B9CF-0945E97CE599}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B76BCAB2-5FA4-4E69-B9CF-0945E97CE599}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B76BCAB2-5FA4-4E69-B9CF-0945E97CE599}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
