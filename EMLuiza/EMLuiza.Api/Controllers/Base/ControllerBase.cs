@@ -33,28 +33,33 @@ namespace EMLuiza.Api.Controllers.Base
                 }
                 catch (Exception ex)
                 {
-                    // Aqui devo logar o erro
-                    return Request.CreateResponse(HttpStatusCode.Conflict, $"Houve um problema interno com o servidor. Entre em contato com o Administrador do sistema caso o problema persista. Erro interno: {ex.Message}");
+                    return Request.CreateResponse(HttpStatusCode.Conflict, $"Internal error: {ex.Message}");
                 }
             }
             else
             {
-                return Request.CreateResponse(HttpStatusCode.BadRequest, new { errors = serviceBase.Notifications });
+                return Request.CreateResponse(HttpStatusCode.BadRequest,
+                    new
+                    {
+                        errors = serviceBase.Notifications
+                    });
             }
         }
 
         public async Task<HttpResponseMessage> ResponseExceptionAsync(Exception ex)
         {
-            return Request.CreateResponse(HttpStatusCode.InternalServerError, new { errors = ex.Message, exception = ex.ToString() });
+            return Request.CreateResponse(HttpStatusCode.InternalServerError,
+                new
+                {
+                    errors = ex.Message,
+                    exception = ex.ToString()
+                });
         }
 
         protected override void Dispose(bool disposing)
         {
-            //Realiza o dispose no serviço para que possa ser zerada as notificações
             if (_serviceBase != null)
-            {
                 _serviceBase.Dispose();
-            }
 
             base.Dispose(disposing);
         }

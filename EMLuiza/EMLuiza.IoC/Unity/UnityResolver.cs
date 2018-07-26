@@ -1,9 +1,6 @@
 ﻿using Microsoft.Practices.Unity;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web.Http.Dependencies;
 
 namespace EMLuiza.IoC.Unity
@@ -28,7 +25,7 @@ namespace EMLuiza.IoC.Unity
             }
             catch (ResolutionFailedException ex)
             {
-                throw ex;
+                return null;
             }
         }
 
