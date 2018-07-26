@@ -9,7 +9,7 @@ using System.Web.Http;
 
 namespace EMLuiza.Api.Controllers
 {
-    [RoutePrefix("employee")]
+    [RoutePrefix("api/employee")]
     public class EmployeeController : ControllerBase
     {
         private readonly IServiceEmployee _serviceEmployee;
@@ -19,12 +19,29 @@ namespace EMLuiza.Api.Controllers
             _serviceEmployee = serviceEmployee;
         }
 
+        [Route("")]
         [HttpPost]
         public async Task<HttpResponseMessage> Create(AddEmployeeRequest request)
         {
             try
             {
                 var response = _serviceEmployee.Create(request);
+
+                return await ResponseAsync(response, _serviceEmployee);
+            }
+            catch (Exception ex)
+            {
+                return await ResponseExceptionAsync(ex);
+            }
+        }
+
+        [Route("")]
+        [HttpGet]
+        public async Task<HttpResponseMessage> List()
+        {
+            try
+            {
+                var response = _serviceEmployee.List();
 
                 return await ResponseAsync(response, _serviceEmployee);
             }
