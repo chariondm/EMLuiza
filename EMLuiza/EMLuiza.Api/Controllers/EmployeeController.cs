@@ -37,11 +37,11 @@ namespace EMLuiza.Api.Controllers
 
         [Route("")]
         [HttpGet]
-        public async Task<HttpResponseMessage> List()
+        public async Task<HttpResponseMessage> List(int page_size = 10, int page = 1)
         {
             try
             {
-                var response = _serviceEmployee.List();
+                var response = _serviceEmployee.List(page_size, page);
 
                 return await ResponseAsync(response, _serviceEmployee);
             }

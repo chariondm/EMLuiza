@@ -38,11 +38,13 @@ namespace EMLuiza.Domain.Services
             return (AddEmployeeResponse)employee;
         }
 
-        public IEnumerable<EmployeeResponse> List()
+        public IEnumerable<EmployeeResponse> List(int takeCount, int takePage)
         {
             return _repositoryEmployee
                         .List()
                         .ToList()
+                        .Skip((takePage - 1) * takeCount)
+                        .Take(takeCount)
                         .Select(employee => (EmployeeResponse)employee)
                         .ToList();
         }

@@ -8,7 +8,7 @@ namespace EMLuiza.Domain.Interfaces.Services
     {
         AddEmployeeResponse Create(AddEmployeeRequest req);
 
-        IEnumerable<EmployeeResponse> List();
+        IEnumerable<EmployeeResponse> List(int takeCount, int takePage);
 
         RemoveEmployeeResponse Remove(RemoveEmployeeRequest req);
     }
