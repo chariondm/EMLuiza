@@ -18,6 +18,16 @@ namespace EMLuiza.Infra.Persistence.Repositories.Base
             _context = context;
         }
 
+        public TEntity GetById(TId id, params Expression<Func<TEntity, object>>[] includeProperties)
+        {
+            if (includeProperties.Any())
+            {
+                return List(includeProperties).FirstOrDefault(x => x.Id.ToString() == id.ToString());
+            }
+
+            return _context.Set<TEntity>().Find(id);
+        }
+
         public TEntity Create(TEntity entity)
         {
             return _context.Set<TEntity>().Add(entity);

@@ -8,6 +8,8 @@ namespace EMLuiza.Domain.Interfaces.Repositories.Base
        where TEntity : class
        where TId : struct
     {
+        TEntity GetById(TId id, params Expression<Func<TEntity, object>>[] includeProperties);
+
         TEntity Create(TEntity entity);
 
         IQueryable<TEntity> List(params Expression<Func<TEntity, object>>[] includeProperties);

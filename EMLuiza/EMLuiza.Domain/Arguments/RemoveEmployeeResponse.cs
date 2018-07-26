@@ -6,16 +6,11 @@ namespace EMLuiza.Domain.Arguments
 {
     public class RemoveEmployeeResponse : IResponse
     {
-        public Guid Id { get; private set; }
-        public string Message { get; private set; }
-
-        public static explicit operator RemoveEmployeeResponse(Employee employee)
+        public RemoveEmployeeResponse(string message)
         {
-            return new RemoveEmployeeResponse()
-            {
-                Id = employee.Id,
-                Message = "Registro removido com sucesso!"
-            };
+            Message = message;
         }
+
+        public string Message { get; private set; }
     }
 }

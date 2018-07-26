@@ -49,7 +49,11 @@ namespace EMLuiza.Domain.Services
 
         public RemoveEmployeeResponse Remove(RemoveEmployeeRequest req)
         {
-            throw new NotImplementedException();
+            var employee = _repositoryEmployee.GetById(req.Id);
+
+            _repositoryEmployee.Remove(employee);
+
+            return new RemoveEmployeeResponse("No content");
         }
     }
 }
